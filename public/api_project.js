@@ -1,6 +1,6 @@
 define({
   "title": "Custom apiDoc browser title",
-  "url": "https://api.github.com/v1",
+  "url": "http://localhost:8080",
   "name": "test-api",
   "version": "0.0.1",
   "description": "API service",
@@ -9,7 +9,7 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2020-03-05T20:50:05.783Z",
+    "time": "2020-03-08T20:07:13.262Z",
     "url": "http://apidocjs.com",
     "version": "0.20.0"
   }

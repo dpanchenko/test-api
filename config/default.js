@@ -6,14 +6,14 @@ module.exports = {
     version: packageJson.version,
   },
   server: {
-    port: parseInt(process.env.PORT, 10),
+    port: parseInt(process.env.PORT, 10) || 8080,
   },
   logs: {
     level: process.env.LOGS_LEVEL || 'debug',
     isDevelopmentMode: process.env.LOGS_IS_DEVELOPMENT || false,
   },
   mongo: {
-    url: process.env.MONGODB_URI || 'mongodb://localhost:27017/test_db',
+    url: process.env.MONGODB_URL || 'mongodb://localhost:27017/test_db',
     options: {
       auto_reconnect: true,
       useUnifiedTopology: true,

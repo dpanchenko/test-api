@@ -13,6 +13,13 @@
 git clone
 ```
 
+ - Configure local environments with settings:
+``` bash
+export PORT=8080 # default is 8080
+export MONGODB_URL=mongodb://localhost:27017/test_db # default is mongodb://localhost:27017/test_db
+
+```
+
  - Enter your local directory, and install dependencies:
 
 ``` bash
@@ -32,7 +39,16 @@ npm run lint
 ```
 
 ``` bash
-# run tests
-npm test
+# build docs
+npm run doc
 ```
+
+``` bash
+# run prod start
+npm start
+```
+
+## Links
+
+Documentation is available on root url like `http://localhost:8080/` after run command `npm run doc`
 
