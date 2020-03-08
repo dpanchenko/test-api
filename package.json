@@ -1,0 +1,61 @@
+{
+  "name": "test-api",
+  "version": "0.0.1",
+  "description": "API service",
+  "main": "service.js",
+  "scripts": {
+    "dev": "nodemon service.js",
+    "doc": "apidoc -e node_modules -o public/ service.js",
+    "lint": "eslint .",
+    "pretest": "npm run lint --silent",
+    "postinstall": "if [ $DOC ]; then npm run doc; fi",
+    "test": "NODE_ENV=test nyc --reporter=text mocha -R spec test/**/*.test.js",
+    "start": "forever service.js"
+  },
+  "apidoc": {
+    "title": "Custom apiDoc browser title",
+    "url": "https://api.github.com/v1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Dmitry Panchenko",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-async-await": "0.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "nyc": "^11.1.0",
+    "pre-commit": "^1.2.2",
+    "sinon": "^3.2.0"
+  },
+  "precommit": [
+    "lint"
+  ],
+  "dependencies": {
+    "apidoc": "^0.20.0",
+    "body-parser": "^1.17.2",
+    "config": "^1.26.2",
+    "cors": "^2.8.5",
+    "debug": "^3.0.0",
+    "express": "^4.15.4",
+    "express-validation": "^1.0.2",
+    "forever": "^1.0.0",
+    "http-status-codes": "^1.4.0",
+    "joi": "^10.6.0",
+    "mongoose": "^5.8.0",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4",
+    "winston": "^3.2.1"
+  }
+}
