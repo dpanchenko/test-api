@@ -60,12 +60,12 @@ router.get('/', validator(paginatorValidation), async (req, res) => {
  *
  * @apiParam {Number} id Post id.
  *
- * @apiSuccess {Object} post Post data.
- * @apiSuccess {Number} result.items.id Post id.
- * @apiSuccess {Number} result.items.userId Post id.
- * @apiSuccess {String} result.items.title Post author id.
- * @apiSuccess {String} result.items.body Post body id.
- * @apiSuccess {Date} result.items.createdAt Post creation date.
+ * @apiSuccess {Object} result Post data.
+ * @apiSuccess {Number} result.id Post id.
+ * @apiSuccess {Number} result.userId Post id.
+ * @apiSuccess {String} result.title Post author id.
+ * @apiSuccess {String} result.body Post body id.
+ * @apiSuccess {Date} result.createdAt Post creation date.
  */
 router.get('/:id', validator(idValidation), async (req, res) => {
   const { id } = req.params;

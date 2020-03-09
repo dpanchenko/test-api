@@ -78,42 +78,42 @@ define({ "api": [
             "group": "Success 200",
             "type": "Object",
             "optional": false,
-            "field": "post",
+            "field": "result",
             "description": "<p>Post data.</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "result.items.id",
+            "field": "result.id",
             "description": "<p>Post id.</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "result.items.userId",
+            "field": "result.userId",
             "description": "<p>Post id.</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "result.items.title",
+            "field": "result.title",
             "description": "<p>Post author id.</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "result.items.body",
+            "field": "result.body",
             "description": "<p>Post body id.</p>"
           },
           {
             "group": "Success 200",
             "type": "Date",
             "optional": false,
-            "field": "result.items.createdAt",
+            "field": "result.createdAt",
             "description": "<p>Post creation date.</p>"
           }
         ]

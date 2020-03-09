@@ -32,7 +32,7 @@ const importData = async () => {
 
 const getList = async (offset, limit) => {
   const [count, items] = await Promise.all([
-    postModel.count().exec(),
+    postModel.countDocuments().exec(),
     postModel.find().select('id title createdAt').skip(offset).limit(limit).exec(), // eslint-disable-line
   ]);
 

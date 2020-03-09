@@ -23,11 +23,17 @@ postsModule.init(app);
 usersModule.init(app);
 
 app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
+  if (err.name === 'ValidationError') {
+    err.code = err.name;
+    err.statusCode = err.status;
+    err.message = `Validation error: ${err.errors.map(error => error.messages.join('; ')).join('; ')}`;
+  }
+
   if (!err.code) {
     logger.error(`Unexpected server error: ${err.message}`, err);
   }
 
-  sendResult(res, err.data, err.message, err.statusCode);
+  sendResult(res, err.data, err.message, err.statusCode || err.status);
 });
 
 module.exports = {
